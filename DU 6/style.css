@@ -1,0 +1,30 @@
+.nazev{
+    margin-left: 610px
+}
+
+.formular {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;  
+}
+
+.skupina {
+    margin-bottom: 20px;
+}
+
+.skupina label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skupina input{
+    width: 100%;
+    padding: 8px;
+}
+
+.skupina input[type="checkbox"], .skupina input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang cz>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Evidence milenek/milenců">
+    <meta name="author" content="js">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Evidence milenek/milenců</title>
+</head>
+<body>
+    <div class="nazev" > <h1>Evidence milenek/milenců</h1></div>
+
+     <div class="formular">
+        <form action="http://jecna.lmsoft.cz/form.php" enctype="multipart/form-data" method="post">
+            <fieldset>
+                <legend>Pohlaví:</legend>
+                <input type="radio" name="kruh" value="moznost1">Muž<br>
+                <input type="radio" name="kruh" value="moznost2">Žena<br>
+                <input type="radio" name="kruh" value="moznost3">Jiné<br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Osobní údaje:</legend>
+                <label for="jmeno">Jméno:</label><br>
+                <input type="text" id="jmeno" name="jmeno" required><br>
+
+                <label for="prijmeni">Přijmení:</label><br>
+                <input type="text" id="prijmeni" name="prijmeni" required><br>
+
+                <label for="vek">Věk:</label><br>
+                <input type="number" id="vek" name="vek" min="1" max="100"><br>
+
+                <label for="datum">Datum narození:</label><br>
+                <input type="date" id="datum" name="datum"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kontaktní údaje:</legend>
+                <label for="telefon">Telefonní číslo:</label><br>
+                <input type="tel" id="telefon" name="telefon" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br>
+                <label for="insta">Instagram:</label><br>
+                <input type="text" id="insta" name="insta"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vzhled:</legend>
+
+                <label for="nahrani">Fotografie:</label><br>
+                <input type="file" id="nahrani" name="nahrani"><br>
+
+                <label for="vlasy">Barva vlasů:</label><br>
+                <select id="vlasy" name="vlasy">
+                  <option value="blond">Blonďatá</option>
+                  <option value="brunet">Hnědovlasá</option>
+                  <option value="cerno" >Černovlasá</option>
+                  <option value="zrzava">Zrzavá</option>
+                </select><br>
+
+                <label for="barva">Barva pleti:</label><br>
+                <input type="color" id="barva" name="barva">
+            </fieldset>
+
+            <fieldset>
+                <legend>Hodnocení</legend>
+                <label for="hodnoceni">Hodnocení milenky/ce:</label>
+                <input type="number" id="hodnoceni" name="hodnoceni" min="1" max="10">
+            </fieldset>
+            <input type="submit" class="tlacitko" value="Odeslat">
+        </form>
+    </div>
+    </body>
+</html>

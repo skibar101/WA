@@ -1,0 +1,40 @@
+
+body{
+  background-color: black; 
+}
+
+.nazev{
+    color: #ff99ff;
+    text-align: center;
+}
+.formular {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;  
+    background-color: #ff99ff;
+}
+.skupina{
+margin-bottom: 20px;
+}
+
+legend{
+    font-weight: bolder;
+}
+
+.tlacitko{
+   display:block;
+   margin: 0 auto;
+   margin-top: 20px;
+   padding: 10px 20px; 
+   border-radius: 20px;
+   font-size: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+    .formular
+    .skupina
+    .tlacitko{
+     max-width: 80%; 
+     padding: 3%;
+     }
+    }

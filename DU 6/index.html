@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset = "UTF 8">
+    <meta name = "description" content="Formuláře">
+    <meta name = "author" content = "js">
+    <meta name ="viewport" content ="width=device-width, initial scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Reklamační formulář</title>
+</head>
+<body>
+
+    <div class = "nazev" > <h1>Reklamační formulář</h1></div>
+
+     <div class="formular">
+        <form action="/submit" method="post">
+
+            <div class="skupina">
+                <label for="jednoradkovy_text">Jméno a přijmení:</label>
+                <input type="text" id="jednoradkovy_text" name="jednoradkovy_text">
+            </div>
+
+            <div class="skupina">
+                <label for="vice_radkovy_text">Důvod reklamace:</label>
+                <textarea id="vice_radkovy_text" name="vice_radkovy_text"></textarea>
+            </div>
+
+            <div class="skupina">
+                <label>Zakoupeno v:</label>
+                <input type="radio" name="kruh" value="moznost1"> Praze<br>
+                <input type="radio" name="kruh" value="moznost2"> Brně<br>
+            </div>
+            
+            <div class="skupina">
+                <label>Produkt:</label>
+                <input type="checkbox" name="ctverec" value="volba1"> Gibson Les Paul<br>
+                <input type="checkbox" name="ctverec" value="volba2"> Fender Stratocaster<br>
+                <input type="checkbox" name="ctverec" value="volba3"> PRS Singlecut
+            </div>
+
+            <div class="skupina">
+                <label for="nahrani">Foto účtenky:</label>
+                <input type="file" id="nahrani" name="nahrani">
+            </div>
+
+            <input type="submit" class="submit-button" value="Odeslat">
+        </form>
+    </div>
+    </body>
+</html>
