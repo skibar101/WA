@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    </style>
+    <meta charset="UTF-8">
+    <title>TV Dotazník</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TV dotazník</h1>
+    <form action="#" method="post"> 
+        <div class="jmeno">
+           <br> <label for="jmeno">Jméno a příjmení</label><br>
+            <input type="text" name="jmeno" id="jmeno" required>
+        </div> 
+        <div class="rok">
+            <br><label>Kolik vám je let?</label><br>
+            <input type="radio" name="vek" value="18" required> 18 a méně<br>
+            <input type="radio" name="vek" value="19"> 19 až 64<br>
+            <input type="radio" name="vek" value="65"> 65 a více<br>
+        </div>  
+        <div class="zarizeni">
+           <br><label>V jakých zařízeních sledujete ČT?</label><br>
+            <input type="checkbox" name="tv[]" value="Televize" required> Televize<br>
+            <input type="checkbox" name="tv[]" value="Počítač"> Počítač<br>
+            <input type="checkbox" name="tv[]" value="Mobil"> Mobil<br>
+        </div>  
+        <div class="libi">
+            <br><label for="libi">Co se vám líbí na TV?</label><br>
+            <textarea name="libi" id="libi" rows="4" cols="50" required></textarea><br>
+        </div> 
+        <div class="poplatky">
+            <br><label for="poplatky">Jakou výši poplatků jste ochotni platit?</label><br>
+            <input type="text" name="poplatky" id="poplatky" required><br>
+        </div>
+        <div class="odeslat">
+           <br> <input type="submit" value="Odeslat">
+        </div>
+    </form>
+</body>
+</html>
