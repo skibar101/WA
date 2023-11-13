@@ -1,80 +1,57 @@
-
-.container{
-    max-width: 1200px;
-    margin: 0 auto
-}
-
-.content{
-    width: 1221.6px;
-    display: table;
-}
-
-aside,
-main{
-   
-    height: 200px;
-    float: left;
-    box-sizing: border-box;
-    display: table-cell;
-    padding: 5px;
-}
-
-nav,
-header{
-    width: 100%;
-}
-
-nav{
-    height: 50px;
-    margin: 1% 0;
-}
-
-header{
-    height: 80px;
-    margin: 1% 0;
-    padding: 20px;
-
-}
-
-main{
-    width: 68%;
-}
-
-aside{
-    width: 15%;
-    height: auto;
-    margin-left: auto;
-    height: 200px;
-}
-
-footer{
-    float: none;
-    clear: both;
-    height: 80px;
-    width: 100%;
+body{
     margin: 0px;
 }
 
-.left-section{
-    margin: 0px 1% 0px 0px;
-}
-
-.right-section{
-    margin: 0px 0px 1% 1%;
+.container {
+    width: 1200px;
+    margin: 0px auto;
+    text-align: center;
+    font-family: 'Lucia Sans';
+    font-size: large;
 }
 
 header,
 nav,
-main,
-.left-section,
-.right-section,
-footer
- {
-    text-align: center;
-    border: 1px solid #0000;
-    margin-bottom: 10px; 
-    padding: 10px;
-    background-color: #dedede;
-    font-family: "Lucida Sans";
+aside,
+.content,
+footer{
+    background-color: rgb(223, 223, 223);
 }
 
+header,
+footer{
+    height: 80px;
+    margin-top: 10px;
+}
+
+nav {
+    height: 60px;
+    margin: 10px 0px;
+}
+
+aside,
+main,
+.content {
+    min-height: 300px;
+}
+
+.content {
+    width: 790px;
+    margin:0px auto;
+}
+
+aside {
+    width: 190px; 
+    overflow: auto;
+}
+
+.left_sec {
+    float: left;
+    margin-right: 10px;
+
+}
+
+.right_sec {
+    float: right;
+    margin-left: 10px;
+}
