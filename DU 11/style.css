@@ -192,11 +192,16 @@ header{
 
 .container3{
     display: grid;
-    grid-template-columns: auto max-content 10px;
+    grid-template-columns: auto max-content ;
     margin:auto;
     width: 1200px;
     align-items: center;
-    text-align: center;
+    text-align: center; 
+}
+
+.container4{
+    display: flex;
+    justify-content: flex-end;  
 }
 
 .portion{
@@ -216,9 +221,9 @@ header{
 .portion2{
     width:60px;
     height: 60px;
-    grid-column-start: -1;
     justify-self: end;
-
+    margin-left: 10px;
+    
 }
 
 #menu{
