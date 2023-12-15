@@ -196,15 +196,14 @@ header{
 
 .container3{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    max-width: 1200px;
-    grid-template-rows: 1fr;
+    grid-template-columns: auto max-content 40px;
+    margin:auto;
+    width: 1200px;
     align-items: center;
     text-align: center;
 }
 
 .portion{
-    width: 400px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -214,37 +213,23 @@ header{
     color: white;
 }
 
-.portion1{
-    grid-column-start: 7;
-    grid-column-end: 9;
-
-}
-
 .portion2{
-    margin-left: 10px;
     width:60px;
     height: 60px;
     grid-column-start: -1;
-    
-}
-
-.cportion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
 }
 
 #menu{
     list-style: none;
     text-decoration: none;
-    
 }
 
 #menu li a{
     list-style: none;
     text-decoration: none;
     color: white;
-    
+    margin-left: 10px;
 }
 
 

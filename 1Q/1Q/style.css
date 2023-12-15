@@ -1,0 +1,270 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+
+}
+
+.nav-menu li {
+    list-style: none;
+    margin: 20px 10px; 
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 70px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #929292;
+}
+
+.nav-menu .nabidka a {
+    color: rgb(238, 39, 55);
+}
+
+.nav-menu .studovna a {
+    color: rgb(104, 131, 216);
+}
+
+.studovna {
+    font-weight: bold;
+}
+
+.online {
+    color: rgb(104, 131, 216);
+    margin-left: 165px;
+}
+
+.online2 {
+    color: rgb(104, 131, 216);
+    margin-left: 150px;
+}
+
+
+.seznam li {
+    margin: 10px;
+    font-size: 18px;
+}
+
+h2 {
+    color: rgb(104, 131, 216);
+}
+
+.sal {
+    text-align: center;
+}
+
+.video {
+    text-align: center;
+    width: 85%;
+    border-bottom: 1px solid #5472d2;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    border-top: 1px solid #5472d2;
+    margin-top: 10px;
+}
+
+.center iframe {
+    margin: 0 auto;
+}
+
+.tlacitko {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #4c84af;
+    background-color: rgb(104, 131, 216);
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+header {
+    background-color: #5472d2;
+    display: flex;
+}
+
+footer {
+    background-color: #1e73be;
+    height: 300px;
+    margin-top: 10px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.header-menu li {
+    list-style: none;
+    margin: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.header-menu li a {
+    text-decoration: none;
+}
+
+.fa-graduation-cap {
+    color: #5472d2;
+    margin-left: 280px;
+}
+
+.fa-mobile {
+    color: white;
+}
+
+.fa-envelope {
+    color: white;
+
+}
+
+.container {
+    text-align: center;
+
+}
+
+.odstavec1 {
+    border-bottom: 1px solid #5472d2;
+
+}
+
+.odstavec2 {
+    border-bottom: 1px solid #5472d2;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+.odstavec3 {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-rows: 200px;
+    width: 85%;
+    border-bottom: 1px solid #5472d2;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+.odstavec4 {
+    width: 85%;
+    border-bottom: 1px solid #5472d2;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+.odstavec5 {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-rows: 200px;
+    width: 85%;
+    border-bottom: 1px solid #5472d2;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+.text2 {
+    margin-left: 150px;
+    font-size: 30px;
+}
+
+.seznam2 li {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.paragraf {
+    margin-bottom: 5px;
+}
+
+.seznam3 li {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.fa-globe {
+    margin-top: 25px;
+    margin-left: 130px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.kniha {
+    width: 300px;
+    height: 250px;
+    float: right;
+    margin-top: -40px;
+    background-image: url(young-woman-reading-a-book-on-her-ipad-picjumbo-com-scaled.jpg);
+    background-size: cover;
+}
+
+.sekce {
+    margin-left: 150px;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    width: 85%;
+    margin: 0 auto;
+
+}
+
+.konec1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 15px;
+    margin-top: 300px;
+}
+
+.konec2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-left: 200px;
+}
+
+.modra {
+    color: #6f94e7;
+}
+
+.fa-tint {
+    color: #5472d2;
+    margin-bottom: 20px;
+    margin-left: 140px;
+}
+
+.vahate {
+    color: #5472d2;
+    font-size: 25px;
+    margin-left: 120px;
+}
+
+.zkusit {
+    color: #5472d2;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.online_studium{
+    margin-bottom: 50px;
+}
+

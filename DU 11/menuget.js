@@ -10,15 +10,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
         links[5]='<li><a href="#">Další</a></li>';
            
        
-    menu.innerHTML='<ul>';
+    menu.innerHTML='';
     
     for(i=0;i<Math.random() * 10;i++)
        {
        menu.innerHTML+=links[i];
        }
        
-    menu.innerHTML+='</ul>';
-    
-    
+    menu.innerHTML+='';
 
-}); 
+}); //DOMContentLoaded   
