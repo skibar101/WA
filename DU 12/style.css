@@ -1,0 +1,32 @@
+table {
+    border-collapse: collapse;
+    width: 1200px;
+  }
+  
+  th, td {
+    border: 1px solid #bdd1ef;
+    padding: 5px;
+    text-align: center;
+    width: 150px;
+  }
+
+  td{
+    background-color: #f0f0f0;
+  }
+
+  .den{
+    background-color: #bdd1ef;
+  }
+
+ .neviditelny {
+     position: absolute; clip: rect(1px 1px 1px 1px); 
+  }
+  @media (max-width: 768px) {
+    table {
+      width: 100%;
+    }
+  
+    th, td {
+      width: auto;
+    }
+  }
