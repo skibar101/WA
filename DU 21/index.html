@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+         window.addEventListener("DOMContentLoaded", () => {
+        var pattern1 = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= i; j++) {
+                pattern1 += '*';
+            }
+            pattern1 += '\n';
+        }
+        document.getElementById('pattern1').innerText = pattern1;
+
+        var pattern2 = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= i - 1; j++) {
+                pattern2 += ' ';
+            }
+            for (var j = 1; j <= 5 - i + 1; j++) {
+                pattern2 += '*';
+            }
+            pattern2 += '\n';
+        }
+        document.getElementById('pattern2').innerText = pattern2;
+
+        var pattern3 = '';
+        for (var i = 1; i <= 5; i++) {
+            if (i === 4) {
+                for (var j = 1; j <= 7; j++) {
+                    pattern3 += '*';
+                }
+            } else {
+                pattern3 += '*\n';
+            }
+        }
+        document.getElementById('pattern3').innerText = pattern3;
+    } 
+);
+    </script>
+</head>
+<body>
+    <h1>1</h1>
+    <div id="pattern1"></div><br>
+    <h1>2</h1>
+    <div id="pattern2"></div><br>
+    <h1>3</h1>
+    <div id="pattern3"></div>
+</body>
+</html>

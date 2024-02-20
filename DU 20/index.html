@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+        let tlacitko = document.getElementById('vypocet');
+        tlacitko.addEventListener('click', (e) => {
+        zadat = Number(document.getElementById('zadat').value);
+    
+    let znamka = zadat;
+       if(znamka <= 5 && znamka >= 1){
+        switch (znamka){
+            case 1:
+                znamka = "výborný";
+                break;
+            case 2:
+                znamka = "chvalitebný";
+                break;
+            case 3:
+                znamka = "dobrý";
+                break;
+            case 4:
+                znamka = "dostatečný";
+                break;
+            case 5:
+                znamka = "nedostatečný";
+                break;
+        }
+        document.getElementById("vysledek").innerHTML = znamka;
+    }else{
+        document.getElementById("vysledek").innerHTML = "jenom čísla 1-5";
+    } 
+    });
+    });
+      </script>
+</head>
+<body>
+    <form>
+        <label for="zadat">Známka: </label>
+        <input type="number" name="zadat" id="zadat" value="">
+        <input type="button" id="vypocet" value="Přepočítej">
+        </form>
+        <p id="vysledek"></p>
+</body>
+</html>

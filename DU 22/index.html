@@ -4,7 +4,7 @@
     <script>
         window.addEventListener("DOMContentLoaded", (event) => {
         const datum = new Date();
-        let rok = prompt("Zadej rok");
+        let rok = prompt("Zadejte rok");
 
         if(rok == datum.getFullYear()){
             if (rok % 4 === 0 && (rok % 100 != 0 || rok % 400 != 0)) {
@@ -27,7 +27,6 @@
         }
     });
     </script>
-
 </head>
 <body>
     <p id="vysledek"></p>

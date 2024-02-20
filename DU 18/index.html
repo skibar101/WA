@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        const form = document.getElementById('znamky-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const znamka1 = parseFloat(document.getElementById('znamka1').value);
+            const znamka2 = parseFloat(document.getElementById('znamka2').value);
+            const znamka3 = parseFloat(document.getElementById('znamka3').value);
+            const znamka4 = parseFloat(document.getElementById('znamka4').value);
+            const znamka5 = parseFloat(document.getElementById('znamka5').value);
+
+            const vaha1 = parseFloat(document.getElementById('vaha1').value);
+            const vaha2 = parseFloat(document.getElementById('vaha2').value);
+            const vaha3 = parseFloat(document.getElementById('vaha3').value);
+            const vaha4 = parseFloat(document.getElementById('vaha4').value);
+            const vaha5 = parseFloat(document.getElementById('vaha5').value);
+
+            const soucet = znamka1*vaha1 + znamka2*vaha2 + znamka3*vaha3 + znamka4*vaha4 + znamka5*vaha5;
+            const vaha = vaha1+vaha2+vaha3+vaha4+vaha5;
+            const prumer = soucet/vaha;
+
+            document.getElementById('vysledek').innerHTML = `Vážený průměr je: ${prumer.toFixed(2)}`;
+        });
+    </script>
+</head>
+<body>
+    <form id="znamky-form">
+        <label for="znamka1">Známka 1:</label>
+        <input type="number" id="znamka1" min="1" max="5" required>
+        <label for="vaha1">Váha 1:</label>
+        <input type="number" id="vaha1" min="1" max="10" required><br>
+
+        <label for="znamka2">Známka 2:</label>
+        <input type="number" id="znamka2" min="1" max="5" required>
+        <label for="vaha2">Váha 2:</label>
+        <input type="number" id="vaha2" min="1" max="10" required><br>
+
+        <label for="znamka3">Známka 3:</label>
+        <input type="number" id="znamka3" min="1" max="5" required>
+        <label for="vaha3">Váha 3:</label>
+        <input type="number" id="vaha3" min="1" max="10" required><br>
+
+        <label for="znamka4">Známka 4:</label>
+        <input type="number" id="znamka4" min="1" max="5" required>
+        <label for="vaha4">Váha 4:</label>
+        <input type="number" id="vaha4" min="1" max="10" required><br>
+
+        <label for="znamka5">Známka 5:</label>
+        <input type="number" id="znamka5" min="1" max="5" required>
+        <label for="vaha5">Váha 5:</label>
+        <input type="number" id="vaha5" min="1" max="10" required><br>
+
+        <input type="submit" value="Vypočítat průměr">
+    </form>
+
+    <div id="vysledek"></div>
+</body>
+</html>

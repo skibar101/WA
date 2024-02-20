@@ -1,0 +1,102 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: #ededed;
+}
+
+
+.container{
+    display: flex;
+    height: 600px;
+    width: 1200px;
+    margin: auto;
+    border-radius:35px;
+    margin-top: 150px;
+    background-color: white;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+#fullName,
+#email,
+#passwd {
+    font-size: 20px;
+    margin-bottom: 10px;  
+}
+
+label{
+    font-size: 25px;
+    font-weight: 1000;  
+}
+
+input{
+    border: none;
+    border-radius: 8px; 
+    height:45px;
+    width: 300px;
+    background-color: #ededed;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+
+#submit{
+    height: 75px;
+    width: 270px;
+    margin: 20px;
+    margin-right: 10px;
+    background-color: #b21212;
+    color: white;
+    font-size: 27px;
+    font-weight: 1000;
+    transition: background-color 0.3s;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: #d42121;
+}
+
+.side{
+    display: flex;
+}
+
+.side img{
+    height: 600px;
+    width: 750px;
+    border-top-left-radius: 35px; 
+    border-bottom-left-radius: 35px;
+}
+
+@media (max-width: 865px) {
+    .container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        align-items: center; 
+        justify-content: flex-start; 
+        margin:0 ;
+    }
+
+    .form{
+        margin:0 auto;
+    }
+
+    .side img {
+        display: none; 
+    }
+
+   
+
+}
