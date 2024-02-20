@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+        const datum = new Date();
+        let rok = prompt("Zadej rok");
+
+        if(rok == datum.getFullYear()){
+            if (rok % 4 === 0 && (rok % 100 != 0 || rok % 400 != 0)) {
+                document.getElementById("vysledek").innerHTML = "Rok " + rok +" je přestupný";
+            }else{
+                document.getElementById("vysledek").innerHTML = "Rok " + rok +" není přestupný"; 
+            }
+        }else if(rok > datum.getFullYear()){
+            if (rok % 4 === 0 ) {
+                document.getElementById("vysledek").innerHTML = "Rok " + rok +" bude přestupný";
+            }else{
+                document.getElementById("vysledek").innerHTML = "Rok " + rok +" nebude přestupný"; 
+            }
+        }else{
+            if (rok % 4 === 0 ) {
+                document.getElementById("vysledek").innerHTML = "Rok " + rok +" byl přestupný";
+            }else{
+                document.getElementById("vysledek").innerHTML = "Rok " + rok +" nebyl přestupný"; 
+            }
+        }
+    });
+    </script>
+
+</head>
+<body>
+    <p id="vysledek"></p>
+</body>
+</html>
