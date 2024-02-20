@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Největší číslo ze tří</h2>
+    <div class="input-group">
+      <label for="cislo1">1. číslo:</label>
+      <input type="number" id="cislo1" required>
+    </div>
+    <div class="input-group">
+      <label for="cislo2">2. číslo:</label>
+      <input type="number" id="cislo2" required>
+    </div>
+    <div class="input-group">
+      <label for="cislo3">3. číslo:</label>
+      <input type="number" id="cislo3" required>
+    </div>
+    <button class="btn" onclick="vypocitejNejvetsi()">Vypočítat největší číslo</button>
+    <div id="vysledek"></div>
+  </div>
+
+  <script>
+    function vypocitejNejvetsi() {
+    const cislo1 = (document.getElementById("cislo1").value);
+    const cislo2 =(document.getElementById("cislo2").value);
+    const cislo3 = (document.getElementById("cislo3").value);
+
+    if (isNaN(cislo1) || isNaN(cislo2) || isNaN(cislo3)) {
+      alert("Zadejte čísla");
+      return;
+    }
+
+    const nejvetsi = Math.max(cislo1, cislo2, cislo3);
+
+    const vysledek = document.getElementById("vysledek");
+    vysledek.innerHTML = `Největší číslo je: ${nejvetsi}`;
+  }
+  </script>
+</body>
+</html>
