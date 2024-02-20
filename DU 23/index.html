@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            let cj, m, it, e;
+
+            while (true) {
+                cj = Number(prompt("Znamka z ČJ"));
+                if (Number.isInteger(cj) && cj >= 1 && cj <= 5) break;
+                alert("Zadejte celé číslo mezi 1 a 5.");
+            }
+
+            while (true) {
+                m = Number(prompt("Znamka z M"));
+                if (Number.isInteger(m) && m >= 1 && m <= 5) break;
+                alert("Zadejte celé číslo mezi 1 a 5.");
+            }
+
+            while (true) {
+                it = Number(prompt("Znamka z IT"));
+                if (Number.isInteger(it) && it >= 1 && it <= 5) break;
+                alert("Zadejte celé číslo mezi 1 a 5.");
+            }
+
+            while (true) {
+                e = Number(prompt("Znamka z EL"));
+                if (Number.isInteger(e) && e >= 1 && e <= 5) break;
+                alert("Zadejte celé číslo mezi 1 a 5.");
+            }
+
+            let maVyznamenani = ((cj + m + it + e) / 4) <= 1.5 && cj < 3 && m < 3 && it < 3 && e < 3;
+            let jeKlasifikovan = cj > 0 && m > 0 && it > 0 && e > 0;
+            let prospel = cj < 5 && m < 5 && it < 5 && e < 5;
+
+            if (maVyznamenani && prospel && jeKlasifikovan) {
+                document.getElementById("vysvedceni").innerHTML = "S Vyznamenáním";
+            } else if (prospel && jeKlasifikovan && !maVyznamenani) {
+                document.getElementById("vysvedceni").innerHTML = "Prospěl";
+            } else if (!jeKlasifikovan) {
+                document.getElementById("vysvedceni").innerHTML = "Neklasifikován";
+            } else {
+                document.getElementById("vysvedceni").innerHTML = "neprospěl";
+            }
+        });
+    </script>
+</head>
+<body>
+    <p id="vysvedceni"></p>
+</body>
+</html>
