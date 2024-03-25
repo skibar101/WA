@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title></title>
+  <script>
+
+    function removeNullValues() {
+      const inputs = document.querySelectorAll('input');
+
+      inputs.forEach(input => {
+        if (input.value === 'null') {
+          input.value = '';
+        }
+      });
+    }
+
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+      removeNullValues();
+    });
+
+
+
+    /*
+    Zadání:
+    1) dopište funkci removeNullValues, aby dělala: JS skript, který ze všech input vymaže "null". A otestujte.
+    2) dopište eventlistener, abych se funkce spustily až po zpracování DOM
+    3) udělat na LinkedIn odkaz vedle input, kde je uvedená URL.
+    4) skrýt celý <p class="field half">, ve kterém je input s třídou "hide"
+    */
+  </script>
+</head>
+
+<body>
+
+  <form action="" class="form" id="548">
+
+    <p class="field">
+      <label class="editFirmSuccess">Uloženo</label>
+
+    </p>
+    <p class="field required">
+      <label class="label required" for="name">Firma</label>
+      <input class="text-input" id="name" name="name" required="" type="text" value="">
+    </p>
+    <p class="field half">
+      <label class="label" for="surname">Kontaktní Osoba</label>
+      <input class="text-input" name="surname" type="text" value="">
+    </p>
+    <p class="field half">
+      <label class="label" for="email">E-mail</label>
+      <input class="text-input" name="email" type="email" value="">
+
+    </p>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hideInputs = document.querySelectorAll('.hide');
+        hideInputs.forEach(function (input) {
+          if (input.tagName === 'DIV') {
+            input.style.display = 'none';
+          } else if (input.tagName === 'INPUT') {
+            input.parentNode.style.display = 'none';
+          }
+        });
+      });
+    </script>
+    <p class="field half hide">
+      <label class="label" for="source">Zdroj</label>
+      <input class="text-input" name="source" type="text" value="">
+    </p>
+    <div class="field half">
+      <label class="label">Obor</label>
+      <select class="select" name="subject_id" required="">
+        <option value="1">IT</option>
+        <option value="2">ELE</option>
+        <option value="3">ELE,IT</option>
+      </select>
+    </div>
+    <div class="field half">
+      <label class="label">Aktivní</label>
+      <select class="select" name="active">
+
+        <option value="0">NE</option>
+        <option value="1" selected="">ANO</option>
+
+      </select>
+    </div>
+    <div class="field half">
+      <label class="label">Datum 1. Kontaktu</label>
+      <input class="text-input hide" name="date_of_contact" type="date" value="">
+    </div>
+
+    <div class="field half">
+      <label class="label">Datum 2. Kontaktu</label>
+
+      <input class="text-input" name="date_of_2_contact" type="date" value="">
+    </div>
+
+    <div class="field half">
+      <label class="label">Datum Schůzky</label>
+      <input class="text-input" name="date_of_meeting" type="date" value="">
+    </div>
+
+    <div class="field half">
+      <label class="label">Výsledek</label>
+      <input class="text-input hide" name="result" type="text" value="">
+    </div>
+
+    <div class="field half">
+      <label class="label">Workshop</label>
+      <input class="text-input" name="workshop" type="text" value="">
+    </div>
+
+    <div class="field half">
+      <label class="label">Brigáda</label>
+      <input class="text-input hide" name="brigade" type="text" value="">
+    </div>
+
+    <div class="field half">
+      <label class="label">Praxe</label>
+      <input class="text-input" name="practice" type="text" value="">
+    </div>
+    <div class="field half">
+      <label class="label">CV</label>
+      <select class="select" name="cv">
+        <option value="1">ANO</option>
+        <option value="0">NE</option>
+      </select>
+    </div>
+
+    <div class="field half extra"><label class="label"> Pozn 2022</label><input class="text-input" name="c14"
+        type="text" value="null"></div>
+    <div class="field half extra"><label class="label"> NEkontaktovat</label><input class="text-input" name="c15"
+        type="int" value="null"></div>
+    <div class="field half extra"><label class="label"> Počet WS 21/22</label><input class="text-input" name="c16"
+        type="int" value="null"></div>
+    <div class="field half extra"><label class="label"> Schůzka 2022</label><input class="text-input" name="c17"
+        type="int" value="null"></div>
+    <div class="field half extra"><label class="label"> Sponzor. dar 21/22</label><input class="text-input" name="c18"
+        type="text" value="null"></div>
+    <div class="field half extra"><label class="label"> Email2</label><input class="text-input" name="c19" type="text"
+        value="null"></div>
+    <div class="field half extra"><label class="label"> Praxe22</label><input class="text-input" name="c20" type="int"
+        value="null"></div>
+    <div class="field half extra">
+      <label class="label"> LinkedIN</label><input class="text-input" name="c22" type="text"> <a
+        href="https://www.linkedin.com/in/luk%C3%A1%C5%A1-masopust-87172358/" target="_blank">LinkedIn</a>
+    </div>
+    <div class="field half extra"><label class="label"> WS 22/23</label><input class="text-input" name="c23" type="int"
+        value="null"></div>
+    <div class="field half extra"><label class="label"> Sponzor. dar 22/23</label><input class="text-input" name="c24"
+        type="int" value="null"></div>
+    <div class="field half extra"><label class="label"> URL</label><input class="text-input" name="c25" type="text"
+        value="null"></div>
+    <div class="field half extra"><label class="label"> CV23</label><input class="text-input" name="c31" type="date"
+        value=""></div>
+    <div class="field half extra"><label class="label"> CV23 odpověd</label><input class="text-input" name="c32"
+        type="text" value="null"></div>
+    <div class="field half extra"><label class="label"> Kontakt září 23</label><input class="text-input" name="c33"
+        type="date" value=""></div>
+    <div class="field half extra"><label class="label"> Veletrh24</label><input class="text-input" name="c34" type="int"
+        value="null"></div><span class="extra_colmns"></span>
+
+
+
+    <p class="field">
+      <label class="label" for="about">Poznámka</label>
+      <textarea class="textarea" cols="50" id="about" name="note" rows="4"></textarea>
+    </p>
+    <p class="field buttons">
+      <button class="button" id="send-button" value="Uložit">Uložit</button>
+
+    </p>
+  </form>
+
+</body>
+
+</html>

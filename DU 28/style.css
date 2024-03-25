@@ -1,0 +1,124 @@
+
+table{
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.active, .source, .hidec, 
+.brigade, .workshop, .practice, 
+.cv, .note, .c14, .c15, .c16, .c17,
+.c20, .c21, .c22, .c23, .c24, .c26{
+
+    display: none;
+
+}
+
+
+thead{
+    box-shadow: black 0px 3px ;
+    height: 50px;
+    background-color: white;
+}
+
+#main-select, .check{
+    margin: 0 10px;
+}
+
+tr{
+    height: 50px;
+    border-bottom: lightgrey solid 1px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(242, 242, 242);
+}
+
+header{
+    width: auto;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    top:0;
+    background-color: white;
+}
+
+button{
+    border: none;
+    background-color: rgb(34, 137, 240);
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    
+}
+
+
+
+textarea{
+    height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+
+tr{
+    display: grid;
+    grid-template-columns: 30px auto;
+    height: auto;
+    box-shadow: lightgrey 0px 0px 4px;
+    margin-bottom: 20px;
+    background-color: white;
+}    
+
+tr:nth-child(even){
+    background-color: white;
+}
+
+thead{
+    display: none;
+}
+
+td{
+    grid-column: span 2;
+}
+
+td:nth-child(1){
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: black 2px solid;
+}
+
+td:nth-child(2){
+    grid-column: span 1;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-bottom: black 2px solid;
+    color: grey;
+}
+
+
+
+td:nth-child(3):before{
+    content: "Kontaktní osoba: ";
+}
+td:nth-child(4):before{
+    content: "Email: ";
+}
+td:nth-child(6):before{
+    content: "Telefon: ";
+}
+td:nth-child(7):before{
+    content: "Obor: ";
+}
+td:nth-child(23):before{
+    content: "Email2: ";
+}
+td:nth-child(29):before{
+    content: "CV23: ";
+}
+
+
+}

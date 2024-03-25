@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+        });
+        function generovatHeslo() {
+            var delkaHesla = (document.getElementById('delka-hesla').value);
+            var zahrnoutVelkaPismena = document.getElementById('zahrnout-velka-pismena').checked;
+            var zahrnoutCisla = document.getElementById('zahrnout-cisla').checked;
+            var zahrnoutSpecialniZnaky = document.getElementById('zahrnout-specialni-znaky').checked;
+
+            var malaPismena = 'abcdefghijklmnopqrstuvwxyz';
+            var velkaPismena = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var cisla = '0123456789';
+            var specialniZnaky = '!@#$%^&*()/-_=+[{]}|;:,<.>?';
+
+            var znaky = malaPismena;
+            if (zahrnoutVelkaPismena) znaky += velkaPismena;
+            if (zahrnoutCisla) znaky += cisla;
+            if (zahrnoutSpecialniZnaky) znaky += specialniZnaky;
+
+            var heslo = '';
+            for (var i = 0; i < delkaHesla; i++) {
+                var nahodnyIndex = Math.floor(Math.random() * znaky.length);
+                heslo += znaky[nahodnyIndex];
+            }
+
+            document.getElementById('vysledek').textContent = heslo;
+        }
+    </script>
+</head>
+<body>
+    <h1>Generátor hesel</h1>
+    <label for="delka-hesla">Délka hesla:</label>
+    <input type="number" id="delka-hesla">
+    <br>
+    <label for="zahrnout-velka-pismena">Zahrnout velká písmena:</label>
+    <input type="checkbox" id="zahrnout-velka-pismena" checked>
+    <br>
+    <label for="zahrnout-cisla">Zahrnout čísla:</label>
+    <input type="checkbox" id="zahrnout-cisla" checked>
+    <br>
+    <label for="zahrnout-specialni-znaky">Zahrnout speciální znaky:</label>
+    <input type="checkbox" id="zahrnout-specialni-znaky" checked>
+    <br>
+    <button onclick="generovatHeslo()">Generovat heslo</button>
+    <div id="vysledek"></div>
+
+    
+</body>
+</html>

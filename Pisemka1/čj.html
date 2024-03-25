@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Čísla jednací</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+
+
+            // funkce generující ČJ
+            function generateCJ(cj, count) {
+                let result = [];
+                const regex = /^SPSE\/\d{5}\/\d{4}$/; // regex pro formát ČJ
+
+                //podmínka která kontroluje zda to co uživatel zadal odpovída regexu
+                if (!regex.test(cj)) {
+                    alert("Start číslo není ve správném formátu (SPSE/číslo/rok).");
+                    return result;
+                }
+
+                const startNumber = parseInt(cj.match(/\d+/)[0]);
+             
+                //dostane rok z cj
+                const year = parseInt(cj.match(/\d{4}$/)[0]);
+
+                // cyklus co dělá vyrábí cj 
+                for (let i = 0; i < count; i++) {
+                    const nextNumber = startNumber + i;
+                    result.push(`SPSE/${nextNumber.toString().padStart(5, '0')}/${year}`);
+                }
+
+                return result;
+            }
+
+            // validace zadaného roku
+            function isValidYear(year) {
+                const currentYear = new Date().getFullYear();
+                return year >= currentYear;
+            }
+
+            // Event listener pro tlačítko
+            let btn = document.getElementById('calc');
+            btn.addEventListener('click', () => {
+                let x = document.getElementById('x').value.trim(); 
+                let y = document.getElementById('y').value.trim();
+
+                // validace čísla jednacího, pokud špatně zabraví červeně
+                if (!x.startsWith('SPSE/') || !x.endsWith('')) {
+                    document.getElementById('x').style.borderColor = 'red';
+                    alert("Číslo jednací musí začínat 'SPSE/'");
+                    return;
+                }
+
+                // validace počtu nelze zadat záporné číslo nebo písmena, pokud špatně zabraví červeně
+                if (!(/^\d+$/.test(y))) {
+                    document.getElementById('y').style.borderColor = 'red';
+                    alert("Zadejte platné číslo pro počty");
+                    return;
+                }
+
+                const count = parseInt(y);
+
+                //generování a následný zobrazení výsledku
+                const generatedCJs = generateCJ(x, count);
+                document.getElementById('res').textContent = generatedCJs.join(' ; ');
+            });
+        });
+    </script>
+</head>
+<body>
+   <form>
+<label for="x">ČJ: </label>
+<input type="text" name="x" id="x" value="SPSE/01254/2022"><BR>
+<label for="y"> Počet:</label>
+<input type="text" name="y" id="y" value="3"><BR>
+
+
+<input type="button" id="calc" value="Spočti"><BR>
+   </form> 
+
+  <p id="res"></p><br>
+
+</body>
+</html>

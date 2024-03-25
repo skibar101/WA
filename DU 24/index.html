@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+       window.addEventListener("DOMContentLoaded", () => {
+        let cisla = Array.from({ length: 10 }, nahodny);
+
+        function nahodny() {
+            return Math.floor(Math.random() * (12 - (-5) + 1)) + (-5);
+        }
+        
+        let soucet = cisla.reduce((acc, cur) => acc + cur, 0);
+        let prumer = soucet / cisla.length;
+       
+        let nadPrumer = cisla.filter(num => num > prumer).length;
+
+        let min = Math.min(...cisla);
+        let max = Math.max(...cisla);
+
+        console.log("Pole čísel:", cisla);
+        console.log("Průměr:", prumer);
+        console.log("Počet číselnad průměrem:", nadPrumer);
+        console.log("Nejmenší prvek:", min);
+        console.log("Největší prvek:", max);
+    }
+);
+    </script>
+</head>
+<body>
+    <h1>HODNOTY JSOU V KONZOLI</h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+     window.addEventListener("DOMContentLoaded", () => {
+     });
+        function validace() {
+    
+          var email = document.getElementById("email").value;
+          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (emailPattern.test(email)) {
+            document.getElementById("vysledek").innerHTML = "e-mail je ve správném formátu.";
+          } else {
+            document.getElementById("vysledek").innerHTML = "é-mail není ve správném formátu.";
+          }
+        }
+        
+        </script>
+</head>
+<body>
+    <h2>Kontrola formátu e-mailu</h2>
+
+<form id="emailForm" onsubmit="validace(); return false;">
+  <label for="email">zadej e-mail:</label><br>
+  <input type="email" id="email" name="email"><br>
+  <input type="submit" value="Odeslat">
+</form>
+
+<p id="vysledek"></p>
+
+
+</body>
+</html>
