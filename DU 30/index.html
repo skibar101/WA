@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+  let MathScore = [
+    ["Bar", 20, 60, "A"],
+    ["Foo", 10, 52, "B"],
+    ["Joey", 5, 24, "F"],
+    ["John", 28, 43, "A"],
+    ["Liza", 16, 51, "B"]
+  ];
+
+  function funkce(data) {
+    let tabulka = document.querySelector("#mathScores tbody");
+
+    data.forEach(student => {
+      let rada = document.createElement("tr");
+
+      student.forEach(value => {
+        let pole = document.createElement("td");
+
+        pole.textContent = value;
+        rada.appendChild(pole);
+      });
+      tabulka.appendChild(rada);
+    });
+    
+  }
+
+  
+  funkce(MathScore);
+});
+
+</script>
+</head>
+<body>
+
+<table id="mathScores">
+  <thead>
+    <tr>
+      <th>Jméno</th>
+      <th>Test 1</th>
+      <th>Test 2</th>
+      <th>Známka</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+
+
+</body>
+</html>
