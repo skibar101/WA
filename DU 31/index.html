@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+    ul {
+     list-style-type: none;
+     
+    }
+
+    .completed {
+        opacity: 0.5;
+    }
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+    const todoForm = document.getElementById('todo-form');
+    const todoList = document.getElementById('todo-list');
+
+    todoForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const itemNameInput = document.getElementById('item-name');
+        const itemDescriptionInput = document.getElementById('item-description');
+        const itemName = itemNameInput.value;
+        const itemDescription = itemDescriptionInput.value;
+
+        if (itemName.trim() === '') {
+            alert('Prosím, zadejte název položky.');
+            return;
+        }
+
+        const todoItem = document.createElement('li');
+        todoItem.classList.add('todo-item');
+        todoItem.innerHTML = `
+            <input type="checkbox">
+            <span>${itemName}</span>
+            <button class="delete-btn">Smazat</button>
+        `;
+        if (itemDescription.trim() !== '') {
+            const descriptionSpan = document.createElement('span');
+            descriptionSpan.textContent = ` - ${itemDescription}`;
+            todoItem.appendChild(descriptionSpan);
+        }
+
+        const deleteBtn = todoItem.querySelector('.delete-btn');
+        deleteBtn.addEventListener('click', function() {
+            todoItem.remove();
+        });
+
+        const checkbox = todoItem.querySelector('input[type="checkbox"]');
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                todoItem.classList.add('completed');
+            } else {
+                todoItem.classList.remove('completed');
+            }
+        });
+
+        todoList.appendChild(todoItem);
+        itemNameInput.value = '';
+        itemDescriptionInput.value = '';
+    });
+});
+</script>
+
+</head>
+<body>
+    <h1>Todo List</h1>
+    <form id="todo-form">
+        <input type="text" id="item-name" placeholder="Název">
+        <input type="text" id="item-description" placeholder="Popis">
+        <button type="submit">Přidat položku</button>
+    </form>
+    <ul id="todo-list"></ul>
+
+
+</body>
+</html>
