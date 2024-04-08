@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script>
+
+
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+
+        function setCookie(cookieName, cookieValue, expiryDays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+}
+
+
+function getCookie(cookieName) {
+    var name = cookieName + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var cookieArray = decodedCookie.split(';');
+    for (var i = 0; i < cookieArray.length; i++) {
+        var cookie = cookieArray[i];
+        while (cookie.charAt(0) == ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name) == 0) {
+            return cookie.substring(name.length, cookie.length);
+        }
+    }
+    return "";
+}
+
+
+var currentDate = new Date().toLocaleString();
+var browserName = navigator.userAgent;
+
+
+var lastVisit = getCookie("lastVisit");
+
+if (lastVisit !== "") {
+    console.log("Poslední návštěva: " + lastVisit);
+} else {
+    console.log("AHoooooooooooooj!");
+}
+
+
+var screenWidth = window.screen.width;
+var screenHeight = window.screen.height;
+
+
+var browserName = navigator.userAgent;
+
+
+var isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+
+var deviceInfo = document.getElementById("deviceInfo");
+
+if (isMobile) {
+    deviceInfo.textContent = " mobil:";
+} else {
+    deviceInfo.textContent = "desktop:";
+}
+
+deviceInfo.textContent += "\nRozměry obrazovky: " + screenWidth + " x " + screenHeight;
+deviceInfo.textContent += "\nProhlížeč: " + browserName;
+
+});
+   </script>
+</head>
+<body>
+    <h1>sušenky</h1>
+    <p id="deviceInfo"></p>
+
+</body>
+</html>
